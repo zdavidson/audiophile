@@ -1,0 +1,21 @@
+#hero {
+  // General Styles
+  background-image: url("../../assets/images/image-hero.jpg");
+
+  // Small Screens
+  @media screen and (max-width: 600px) {
+  }
+
+  // Medium Screens
+  @media screen and (min-width: 600px) and (max-width: 960px) {
+  }
+
+  // Large Screens
+  @media screen and (min-width: 960px) {
+    // #hero-img {
+    height: 90vh;
+    //   transform: translateY(-10.85%);
+    //   z-index: -5;
+    // }
+  }
+}
