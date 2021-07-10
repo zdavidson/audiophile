@@ -17,13 +17,13 @@ const Navigation = () => {
             <NavLink className="navigation-link" to="/">
               Home
             </NavLink>
-            <NavLink className="navigation-link" to="/">
+            <NavLink className="navigation-link" to="/headphones">
               Headphones
             </NavLink>
-            <NavLink className="navigation-link" to="/">
+            <NavLink className="navigation-link" to="/speakers">
               Speakers
             </NavLink>
-            <NavLink className="navigation-link" to="/">
+            <NavLink className="navigation-link" to="/earphones">
               Earphones
             </NavLink>
           </Nav>
