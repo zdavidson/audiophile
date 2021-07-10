@@ -1,5 +1,5 @@
 import "./App.scss";
-import Navigation from "./components/Navigation";
+import Navigation from "./components/Shared/Navigation";
 import Home from "./components/Home/Home";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 

@@ -1,4 +1,4 @@
-#hero {
+#hero-bg {
   // General Styles
   background-image: url("../../assets/images/image-hero.jpg");
 
@@ -14,8 +14,53 @@
   @media screen and (min-width: 960px) {
     // #hero-img {
     height: 90vh;
-    //   transform: translateY(-10.85%);
-    //   z-index: -5;
+
     // }
+  }
+}
+
+#hero {
+  // General Styles
+  color: white;
+  h1,
+  h2 {
+    text-transform: uppercase;
+  }
+
+  h2 {
+    color: rgba(255, 255, 255, 0.26);
+  }
+
+  // Small Screens
+  @media screen and (max-width: 600px) {
+  }
+
+  // Medium Screens
+  @media screen and (min-width: 600px) and (max-width: 960px) {
+  }
+
+  // Large Screens
+  @media screen and (min-width: 960px) {
+    h1 {
+      font-size: 4rem;
+      letter-spacing: 0.25rem;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      letter-spacing: 1.2rem;
+      padding-bottom: 2rem;
+    }
+
+    p {
+      line-height: 2rem;
+      padding: 1.5rem 0;
+      margin-right: 8rem;
+    }
+    #hero-text {
+      width: 45%;
+
+      padding: 15% 0;
+    }
   }
 }

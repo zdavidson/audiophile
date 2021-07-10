@@ -1,10 +1,21 @@
 import "./Hero.scss";
+import Button from "../Shared/Button";
 import Container from "react-bootstrap/Container";
 
 const Hero = () => {
   return (
-    <div id="hero">
-      <Container>I need a hero</Container>
+    <div id="hero-bg">
+      <Container id="hero">
+        <div id="hero-text">
+          <h2>New Product</h2>
+          <h1>XX99 Mark II Headphones</h1>
+          <p>
+            Experience natural, lifelike audio and exceptional build quality
+            made for the passionate music enthusiast.
+          </p>
+          <Button />
+        </div>
+      </Container>
     </div>
   );
 };

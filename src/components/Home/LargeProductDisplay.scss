@@ -1,0 +1,66 @@
+#large-product-home {
+  color: white;
+  background-color: #d87d4a;
+  background-image: url("../../assets/images/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position-x: -10rem;
+  border-radius: 0.25rem;
+  display: flex;
+
+  justify-content: space-evenly;
+  padding-top: 7rem;
+
+  h2 {
+    text-transform: uppercase;
+  }
+
+  button {
+    background-color: #101010;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+  }
+
+  button:hover {
+    background-color: #383838;
+  }
+
+  #large-product-image img {
+    width: 25rem;
+
+    margin: 0 8rem;
+    margin-bottom: 0;
+  }
+
+  // Small Screens
+  @media screen and (max-width: 600px) {
+  }
+
+  // Medium Screens
+  @media screen and (min-width: 600px) and (max-width: 960px) {
+  }
+
+  // Large Screens
+  @media screen and (min-width: 960px) {
+    button {
+      margin-bottom: 5rem;
+    }
+
+    h2 {
+      font-size: 4rem;
+      letter-spacing: 0.25rem;
+      margin-right: 4rem;
+    }
+
+    p {
+      line-height: 2rem;
+      padding: 1.5rem 0;
+      margin-right: 10rem;
+      font-weight: 200;
+    }
+    #large-product-text {
+      width: 45%;
+    }
+  }
+}
