@@ -1,0 +1,45 @@
+#best-gear {
+  // General Styles
+  display: flex;
+
+  h2 {
+    text-transform: uppercase;
+
+    span {
+      color: #d87d4a;
+    }
+  }
+  #best-gear-img {
+    border-radius: 0.25rem;
+  }
+  // Small Screens
+  @media screen and (max-width: 600px) {
+  }
+
+  // Medium Screens
+  @media screen and (min-width: 600px) and (max-width: 960px) {
+  }
+
+  // Large Screens
+  @media screen and (min-width: 960px) {
+    margin: 20vh 0;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      font-size: 3rem;
+      font-weight: 400;
+      letter-spacing: 0.1rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-top: 2rem;
+    }
+
+    #best-gear-img,
+    #best-gear-text {
+      width: 44%;
+    }
+  }
+}
