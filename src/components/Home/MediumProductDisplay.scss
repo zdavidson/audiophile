@@ -1,0 +1,50 @@
+#medium-product-home {
+  // General Styles
+  background-image: url("../../assets/images/image-speaker-zx7.jpg");
+  border-radius: 0.25rem;
+  display: flex;
+  text-transform: uppercase;
+
+  button {
+    background-color: transparent;
+    border: 1px solid #101010;
+    color: #101010;
+  }
+
+  button:hover {
+    background-color: #101010;
+    color: #fff;
+  }
+
+  // Small Screens
+  @media screen and (max-width: 600px) {
+  }
+
+  // Medium Screens
+  @media screen and (min-width: 600px) and (max-width: 960px) {
+  }
+
+  // Large Screens
+  @media screen and (min-width: 960px) {
+    height: 39vh;
+    margin-top: 4rem;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      margin-top: 1rem;
+    }
+
+    #medium-product-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      padding: 0 5rem;
+    }
+  }
+}
