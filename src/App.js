@@ -4,6 +4,7 @@ import Footer from "./components/Shared/Footer";
 import Home from "./components/Home/Home";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import CategoryContainer from "./components/Products/CategoryContainer";
+import ProductDetailContainer from "./components/ProductDetail/ProductDetailContainer";
 
 const App = () => {
   return (
@@ -14,6 +15,21 @@ const App = () => {
         <Route exact path="/headphones" component={CategoryContainer} />
         <Route exact path="/speakers" component={CategoryContainer} />
         <Route exact path="/earphones" component={CategoryContainer} />
+        <Route
+          exact
+          path="/headphones/:name"
+          component={ProductDetailContainer}
+        />
+        <Route
+          exact
+          path="/speakers/:name"
+          component={ProductDetailContainer}
+        />
+        <Route
+          exact
+          path="/earphones/:name"
+          component={ProductDetailContainer}
+        />
         <Footer />
       </div>
     </Router>
