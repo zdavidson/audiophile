@@ -1,4 +1,4 @@
-import NewProductCard from "./NewProductCard";
+import ProductCard from "./ProductCard";
 import data from "../../assets/data/data.json";
 
 const Earphones = () => {
@@ -14,13 +14,12 @@ const Earphones = () => {
   earphones.map((item) => {
     if (item.new === true) {
       newItem = item;
-      console.log(newItem);
     }
   });
 
   return (
     <div id="earphones-container">
-      <NewProductCard item={newItem} />
+      <ProductCard item={newItem} />
     </div>
   );
 };

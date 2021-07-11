@@ -1,9 +1,10 @@
-import NewProductCard from "./NewProductCard";
+import ProductCard from "./ProductCard";
 import data from "../../assets/data/data.json";
 
 const Headphones = () => {
   const headphones = [];
   let newItem = {};
+  const otherItems = [];
 
   data.forEach((item) => {
     if (item.category === "headphones") {
@@ -14,13 +15,16 @@ const Headphones = () => {
   headphones.map((item) => {
     if (item.new === true) {
       newItem = item;
-      console.log(newItem);
+    } else if (item.new === false) {
+      otherItems.push(item);
     }
   });
 
   return (
     <div id="headphones-container">
-      <NewProductCard item={newItem} />
+      <ProductCard item={newItem} />
+      <ProductCard item={otherItems[1]} flip={true} />
+      <ProductCard item={otherItems[0]} />
     </div>
   );
 };

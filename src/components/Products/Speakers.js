@@ -1,9 +1,10 @@
-import NewProductCard from "./NewProductCard";
+import ProductCard from "./ProductCard";
 import data from "../../assets/data/data.json";
 
 const Speakers = () => {
   const speakers = [];
   let newItem = {};
+  const otherItems = [];
 
   data.forEach((item) => {
     if (item.category === "speakers") {
@@ -14,13 +15,15 @@ const Speakers = () => {
   speakers.map((item) => {
     if (item.new === true) {
       newItem = item;
-      console.log(newItem);
+    } else if (item.new === false) {
+      otherItems.push(item);
     }
   });
 
   return (
     <div id="speakers-container">
-      <NewProductCard item={newItem} />
+      <ProductCard item={newItem} />
+      <ProductCard item={otherItems[0]} flip={true} />
     </div>
   );
 };

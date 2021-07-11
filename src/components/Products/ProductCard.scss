@@ -10,6 +10,10 @@
     display: flex;
   }
 
+  .flipImg {
+    order: 5;
+  }
+
   // Small Screens
   @media screen and (max-width: 600px) {
   }
@@ -49,6 +53,16 @@
       justify-content: center;
 
       margin-left: 5rem;
+    }
+
+    .flipImg {
+      margin-left: 5rem;
+      margin-right: 0;
+    }
+
+    .flipText {
+      margin-left: 0;
+      margin-right: 5rem;
     }
   }
 }
