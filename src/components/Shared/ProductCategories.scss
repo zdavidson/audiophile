@@ -16,6 +16,15 @@
     letter-spacing: 0.1rem;
   }
 
+  .category-link {
+    color: rgb(141, 141, 141);
+    text-decoration: none;
+  }
+
+  .category-link:hover {
+    color: #d86d4a;
+  }
+
   // Small Screens
   @media screen and (max-width: 600px) {
   }

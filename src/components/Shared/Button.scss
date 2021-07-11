@@ -4,6 +4,7 @@ button {
   border: none;
   padding: 1rem 2rem;
   text-transform: uppercase;
+  transition: background-color 200ms;
 }
 
 button:hover {

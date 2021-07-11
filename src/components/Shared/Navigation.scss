@@ -12,6 +12,10 @@
     color: white;
   }
 
+  #nav-links a {
+    text-decoration: none;
+  }
+
   // Small Screens
   @media screen and (max-width: 600px) {
     .nav-links {
