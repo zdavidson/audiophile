@@ -6,6 +6,7 @@ import Headphones from "./components/Products/Headphones";
 import Speakers from "./components/Products/Speakers";
 import Earphones from "./components/Products/Earphones";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import CategoryContainer from "./components/Products/CategoryContainer";
 
 const App = () => {
   return (
@@ -13,9 +14,9 @@ const App = () => {
       <div className="App">
         <Navigation />
         <Route exact path="/" component={Home} />
-        <Route exact path="/headphones" component={Headphones} />
-        <Route exact path="/speakers" component={Speakers} />
-        <Route exact path="/earphones" component={Earphones} />
+        <Route exact path="/headphones" component={CategoryContainer} />
+        <Route exact path="/speakers" component={CategoryContainer} />
+        <Route exact path="/earphones" component={CategoryContainer} />
         <Footer />
       </div>
     </Router>

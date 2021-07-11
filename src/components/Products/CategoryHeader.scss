@@ -1,0 +1,28 @@
+#category-header {
+  // General Styles
+  background-color: #1a1a1a;
+  color: #fff;
+
+  #header-container {
+    display: flex;
+    text-transform: uppercase;
+  }
+
+  // Small Screens
+  @media screen and (max-width: 600px) {
+  }
+
+  // Medium Screens
+  @media screen and (min-width: 600px) and (max-width: 960px) {
+  }
+
+  // Large Screens
+  @media screen and (min-width: 960px) {
+    #header-container {
+      justify-content: center;
+      align-items: center;
+
+      padding: 6rem;
+    }
+  }
+}
