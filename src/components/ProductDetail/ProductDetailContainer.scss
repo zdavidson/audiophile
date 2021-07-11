@@ -1,6 +1,23 @@
 #detail-container {
   // General Styles
 
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    span {
+      color: #d87d4a;
+      width: 10%;
+      padding-right: 2rem;
+    }
+  }
+
   .product-info {
     display: flex;
   }

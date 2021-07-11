@@ -23,14 +23,16 @@ const ProductDetailContainer = (props) => {
       <div className="product-info">
         <div id="features">
           <h3>Features</h3>
-          <p>{item.features}</p>
+          {item.features.split("\n\n").map((paragraph) => {
+            return <p key={item.id + Math.random()}>{paragraph}</p>;
+          })}
         </div>
         <div id="box-contents">
           <h3>In The Box</h3>
           <ul>
             {item.includes.map((accessory) => {
               return (
-                <li key={Math.random()}>
+                <li key={item.id + Math.random()}>
                   <span>{accessory.quantity}x </span>
                   {accessory.item}
                 </li>
@@ -38,6 +40,11 @@ const ProductDetailContainer = (props) => {
             })}
           </ul>
         </div>
+      </div>
+      <div className="product-gallery">
+        <img src={item.gallery.first.desktop} alt="" />
+        <img src={item.gallery.second.desktop} alt="" />
+        <img src={item.gallery.third.desktop} alt="" />
       </div>
     </Container>
   );
