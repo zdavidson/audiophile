@@ -1,6 +1,7 @@
 import "./Hero.scss";
 import Button from "../Shared/Button";
 import Container from "react-bootstrap/Container";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -13,7 +14,9 @@ const Hero = () => {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </p>
-          <Button />
+          <Link to="/headphones/xx99-mark-two-headphones">
+            <Button />
+          </Link>
         </div>
       </Container>
     </div>

@@ -1,4 +1,5 @@
 import "./SmallProductDisplay.scss";
+import { Link } from "react-router-dom";
 
 const SmallProductDisplay = () => {
   return (
@@ -8,7 +9,9 @@ const SmallProductDisplay = () => {
       </div>
       <div id="small-product-text">
         <h2>YX1 Earphones</h2>
-        <button>See Product</button>
+        <Link to="/earphones/yx1-earphones" target="_top">
+          ><button>See Product</button>
+        </Link>
       </div>
     </div>
   );

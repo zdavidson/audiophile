@@ -1,4 +1,5 @@
 import "./LargeProductDisplay.scss";
+import { Link } from "react-router-dom";
 
 const LargeProductDisplay = () => {
   return (
@@ -12,7 +13,9 @@ const LargeProductDisplay = () => {
           Upgrade to premium speakers that are phenomenally built to deliver
           truly remarkable sound.
         </p>
-        <button>See Product</button>
+        <Link to="/speakers/zx9-speaker" target="_top">
+          <button>See Product</button>
+        </Link>
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./ProductCategories.scss";
 
 const ProductCategories = () => {
@@ -11,9 +12,9 @@ const ProductCategories = () => {
         />
 
         <h4 className="category-title">Headphones</h4>
-        <a href="/" className="category-link">
+        <Link to="/headphones" className="category-link" target="_top">
           Shop
-        </a>
+        </Link>
         <div className="category-bg"></div>
       </div>
       <div className="category">
@@ -23,9 +24,9 @@ const ProductCategories = () => {
           alt="headphones"
         />
         <h4 className="category-title">Speakers</h4>
-        <a href="/" className="category-link">
+        <Link to="/speakers" className="category-link" target="_top">
           Shop
-        </a>
+        </Link>
         <div className="category-bg"></div>
       </div>
       <div className="category">
@@ -35,9 +36,9 @@ const ProductCategories = () => {
           alt="headphones"
         />
         <h4 className="category-title">Earphones</h4>
-        <a href="/" className="category-link">
+        <Link to="/earphones" className="category-link" target="_top">
           Shop
-        </a>
+        </Link>
         <div className="category-bg"></div>
       </div>
     </div>

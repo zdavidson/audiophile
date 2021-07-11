@@ -11,7 +11,7 @@ const Footer = () => {
         <div id="orange-bar"></div>
         <div id="footer-container">
           <div id="footer-text">
-            <NavLink to="/">
+            <NavLink to="/" target="_top">
               <img id="footer-logo" src="./assets/shared/logo.svg" alt="logo" />
             </NavLink>
 
@@ -25,16 +25,28 @@ const Footer = () => {
           <div id="footer-links">
             <NavBar>
               <Nav id="footer-nav" className="nav-links">
-                <NavLink className="navigation-link" to="/">
+                <NavLink className="navigation-link" to="/" target="_top">
                   Home
                 </NavLink>
-                <NavLink className="navigation-link" to="/headphones">
+                <NavLink
+                  className="navigation-link"
+                  to="/headphones"
+                  target="_top"
+                >
                   Headphones
                 </NavLink>
-                <NavLink className="navigation-link" to="/speakers">
+                <NavLink
+                  className="navigation-link"
+                  to="/speakers"
+                  target="_top"
+                >
                   Speakers
                 </NavLink>
-                <NavLink className="navigation-link" to="/earphones">
+                <NavLink
+                  className="navigation-link"
+                  to="/earphones"
+                  target="_top"
+                >
                   Earphones
                 </NavLink>
               </Nav>
