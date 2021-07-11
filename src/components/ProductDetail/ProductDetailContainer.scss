@@ -1,0 +1,25 @@
+#detail-container {
+  // General Styles
+
+  .product-info {
+    display: flex;
+  }
+  // Small Screens
+  @media screen and (max-width: 600px) {
+    .product-info {
+      flex-direction: column;
+    }
+  }
+
+  // Medium Screens
+  @media screen and (min-width: 600px) and (max-width: 960px) {
+  }
+
+  // Large Screens
+  @media screen and (min-width: 960px) {
+    #features {
+      width: 65%;
+      padding-right: 3rem;
+    }
+  }
+}

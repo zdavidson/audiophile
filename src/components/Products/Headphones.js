@@ -18,6 +18,7 @@ const Headphones = () => {
     } else if (item.new === false) {
       otherItems.push(item);
     }
+    return item;
   });
 
   return (
