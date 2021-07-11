@@ -1,0 +1,86 @@
+#checkout-bg {
+  background-color: #f1f1f1;
+  // Small Screens
+  @media screen and (max-width: 600px) {
+  }
+
+  // Medium Screens
+  @media screen and (min-width: 600px) and (max-width: 960px) {
+  }
+
+  // Large Screens
+  @media screen and (min-width: 960px) {
+    padding: 5rem;
+  }
+}
+
+#checkout-container {
+  display: flex;
+}
+
+#checkout {
+  // General Styles
+  background-color: #fff;
+  border-radius: 0.25rem;
+
+  h3 {
+    color: #d87d4a;
+    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+  }
+
+  input {
+    border-radius: 0.25rem;
+    border: 1px solid rgb(199, 199, 199);
+  }
+
+  #billing-details,
+  #shipping-info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  // Small Screens
+  @media screen and (max-width: 600px) {
+  }
+
+  // Medium Screens
+  @media screen and (min-width: 600px) and (max-width: 960px) {
+  }
+
+  // Large Screens
+  @media screen and (min-width: 960px) {
+    padding: 4rem;
+    padding-right: 3rem;
+    margin-right: 1rem;
+
+    h2 {
+      margin-bottom: 3rem;
+    }
+
+    h3 {
+      margin-bottom: 1.5rem;
+    }
+
+    input {
+      padding: 1rem;
+      padding-right: 6rem;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    #address-input {
+      padding-right: 24.5rem;
+    }
+
+    #billing-details div,
+    #shipping-info div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #header-shipping {
+      margin-top: 3rem;
+    }
+  }
+}

@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import "./Navigation.scss";
 import { NavLink } from "react-router-dom";
 
-const Navigation = () => {
+const Navigation = ({ viewCart, setCartView }) => {
   return (
     <div className="navigation">
       <Container>
@@ -27,9 +27,13 @@ const Navigation = () => {
               Earphones
             </NavLink>
           </Nav>
-          <NavLink className="navigation-link" to="/">
+          <button
+            onClick={() => setCartView(!viewCart)}
+            className="navigation-link"
+            to="/"
+          >
             <img src="./assets/shared/icon-cart.svg" alt="cart" />
-          </NavLink>
+          </button>
           <span id="hamburger-icon"></span>
         </NavBar>
       </Container>

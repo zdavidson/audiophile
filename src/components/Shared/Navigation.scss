@@ -8,6 +8,15 @@
 
   background-color: #1a1a1a;
 
+  button,
+  button:hover {
+    background-color: transparent;
+  }
+
+  button {
+    padding: 0;
+  }
+
   #brand {
     color: white;
   }

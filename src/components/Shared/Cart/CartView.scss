@@ -1,0 +1,29 @@
+#cart-view {
+  // General Styles
+  height: 92vh;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.459);
+
+  position: absolute;
+  top: 8.9vh;
+  z-index: 5;
+
+  .cart-container {
+    display: flex;
+  }
+
+  // Small Screens
+  @media screen and (max-width: 600px) {
+  }
+
+  // Medium Screens
+  @media screen and (min-width: 600px) and (max-width: 960px) {
+  }
+
+  // Large Screens
+  @media screen and (min-width: 960px) {
+    .cart-container {
+      justify-content: flex-end;
+    }
+  }
+}

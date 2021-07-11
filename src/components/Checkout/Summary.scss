@@ -1,0 +1,32 @@
+#summary {
+  // General Styles
+  background-color: #fff;
+  border-radius: 0.25rem;
+
+  height: 45vh;
+
+  .summary-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .summary-headers {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  // Small Screens
+  @media screen and (max-width: 600px) {
+  }
+
+  // Medium Screens
+  @media screen and (min-width: 600px) and (max-width: 960px) {
+  }
+
+  // Large Screens
+  @media screen and (min-width: 960px) {
+    margin-left: 1rem;
+    padding: 4rem;
+  }
+}
