@@ -2,9 +2,6 @@ import "./App.scss";
 import Navigation from "./components/Shared/Navigation";
 import Footer from "./components/Shared/Footer";
 import Home from "./components/Home/Home";
-import Headphones from "./components/Products/Headphones";
-import Speakers from "./components/Products/Speakers";
-import Earphones from "./components/Products/Earphones";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import CategoryContainer from "./components/Products/CategoryContainer";
 

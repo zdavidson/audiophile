@@ -12,7 +12,9 @@ const Footer = () => {
         <div id="footer-container">
           <div id="footer-text">
             <NavBar.Brand id="footer-logo" href="#home">
-              <img src="./assets/shared/logo.svg" alt="logo" />
+              <NavLink to="/">
+                <img src="./assets/shared/logo.svg" alt="logo" />
+              </NavLink>
             </NavBar.Brand>
             <p>
               Audiophile is an all in one stop to fulfill your audio needs.

@@ -10,7 +10,9 @@ const Navigation = () => {
       <Container>
         <NavBar id="nav-bar">
           <NavBar.Brand id="brand" href="#home">
-            <img src="./assets/shared/logo.svg" alt="logo" />
+            <NavLink to="/">
+              <img src="./assets/shared/logo.svg" alt="logo" />
+            </NavLink>
           </NavBar.Brand>
 
           <Nav id="nav-links" className="nav-links">
