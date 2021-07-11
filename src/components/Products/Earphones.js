@@ -15,7 +15,7 @@ const Earphones = () => {
     if (item.new === true) {
       newItem = item;
     }
-    return product;
+    return item;
   });
 
   return (
