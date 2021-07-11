@@ -11,11 +11,10 @@ const Footer = () => {
         <div id="orange-bar"></div>
         <div id="footer-container">
           <div id="footer-text">
-            <NavBar.Brand id="footer-logo" href="#home">
-              <NavLink to="/">
-                <img src="./assets/shared/logo.svg" alt="logo" />
-              </NavLink>
-            </NavBar.Brand>
+            <NavLink to="/">
+              <img id="footer-logo" src="./assets/shared/logo.svg" alt="logo" />
+            </NavLink>
+
             <p>
               Audiophile is an all in one stop to fulfill your audio needs.
               We're a small team of music lovers and sound specialists who are

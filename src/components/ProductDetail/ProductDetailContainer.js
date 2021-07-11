@@ -30,7 +30,7 @@ const ProductDetailContainer = (props) => {
           <ul>
             {item.includes.map((accessory) => {
               return (
-                <li>
+                <li key={Math.random()}>
                   <span>{accessory.quantity}x </span>
                   {accessory.item}
                 </li>

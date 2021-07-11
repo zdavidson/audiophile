@@ -9,11 +9,9 @@ const Navigation = () => {
     <div className="navigation">
       <Container>
         <NavBar id="nav-bar">
-          <NavBar.Brand id="brand" href="#home">
-            <NavLink to="/">
-              <img src="./assets/shared/logo.svg" alt="logo" />
-            </NavLink>
-          </NavBar.Brand>
+          <NavLink to="/">
+            <img src="./assets/shared/logo.svg" alt="logo" />
+          </NavLink>
 
           <Nav id="nav-links" className="nav-links">
             <NavLink className="navigation-link" to="/">

@@ -10,6 +10,7 @@ const Speakers = () => {
     if (item.category === "speakers") {
       speakers.push(item);
     }
+    return item;
   });
 
   speakers.map((item) => {
@@ -18,6 +19,7 @@ const Speakers = () => {
     } else if (item.new === false) {
       otherItems.push(item);
     }
+    return item;
   });
 
   return (
