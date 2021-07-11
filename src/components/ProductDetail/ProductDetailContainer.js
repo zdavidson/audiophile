@@ -2,6 +2,8 @@ import Container from "react-bootstrap/Container";
 import ProductCard from "../Products/ProductCard";
 import "./ProductDetailContainer.scss";
 import data from "../../assets/data/data.json";
+import ProductCategories from "../Shared/ProductCategories";
+import BestGear from "../Shared/BestGear";
 
 const ProductDetailContainer = (props) => {
   const itemName = props.match.params.name;
@@ -48,6 +50,22 @@ const ProductDetailContainer = (props) => {
         </div>
         <img src={item.gallery.third.desktop} alt="" />
       </div>
+      <div className="other-products">
+        <h3>You May Also Like</h3>
+        <div className="product-list">
+          {item.others.map((item) => {
+            return (
+              <div key={Math.random()} className="other-product">
+                <img src={item.image.desktop} alt="" />
+                <h4>{item.name}</h4>
+                <button>See Product</button>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <ProductCategories />
+      <BestGear />
     </Container>
   );
 };
