@@ -1,5 +1,6 @@
 import "./App.scss";
 import Navigation from "./components/Shared/Navigation";
+import Footer from "./components/Shared/Footer";
 import Home from "./components/Home/Home";
 import Headphones from "./components/Products/Headphones";
 import Speakers from "./components/Products/Speakers";
@@ -15,6 +16,7 @@ const App = () => {
         <Route exact path="/headphones" component={Headphones} />
         <Route exact path="/speakers" component={Speakers} />
         <Route exact path="/earphones" component={Earphones} />
+        <Footer />
       </div>
     </Router>
   );

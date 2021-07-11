@@ -1,25 +1,15 @@
 .navigation {
   // General Styles
   // border-bottom: 1px solid rgba(255, 255, 255, 0.26);
-  text-transform: uppercase;
+
   font-size: 0.8rem;
 
   padding: 1rem 0;
 
   background-color: #1a1a1a;
 
-  #brand,
-  .navigation-link {
+  #brand {
     color: white;
-  }
-
-  .navigation-link {
-    padding-right: 2rem;
-    text-decoration: none;
-  }
-
-  .navigation-link:hover {
-    color: #d87d4a;
   }
 
   // Small Screens
@@ -43,4 +33,15 @@
       margin: auto;
     }
   }
+}
+
+.navigation-link {
+  color: white;
+  padding-right: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navigation-link:hover {
+  color: #d87d4a;
 }
