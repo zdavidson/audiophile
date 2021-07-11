@@ -2,8 +2,19 @@
   // General Styles
   display: flex;
 
+  form {
+    display: flex;
+    justify-content: space-between;
+    button {
+      padding: 0 1rem;
+    }
+  }
+
   img {
     border-radius: 0.25rem;
+  }
+  .add-to-cart-button {
+    margin-left: 2rem;
   }
 
   .product-text {

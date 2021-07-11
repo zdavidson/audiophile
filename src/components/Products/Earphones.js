@@ -1,4 +1,4 @@
-import ProductCard from "./ProductCard";
+import ProductCard from "../Shared/ProductCard";
 import data from "../../assets/data/data.json";
 
 const Earphones = () => {

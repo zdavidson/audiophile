@@ -1,4 +1,5 @@
 import "./ProductCard.scss";
+import Incrementer from "./Incrementer";
 import { NavLink } from "react-router-dom";
 
 const ProductCard = ({ item, flip, detail }) => {
@@ -11,11 +12,13 @@ const ProductCard = ({ item, flip, detail }) => {
         <p>{item.description}</p>
         {detail ? (
           <div>
-            <p>{item.price}</p>
+            <p>${item.price}.00</p>
             <div>
               <form>
-                <input></input>
-                <button>Add To Cart</button>
+                <Incrementer />
+                <button className="add-to-cart-button" type="button">
+                  Add To Cart
+                </button>
               </form>
             </div>
           </div>

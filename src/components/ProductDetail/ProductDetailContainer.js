@@ -1,5 +1,5 @@
 import Container from "react-bootstrap/Container";
-import ProductCard from "../Products/ProductCard";
+import ProductCard from "../Shared/ProductCard";
 import "./ProductDetailContainer.scss";
 import data from "../../assets/data/data.json";
 import ProductCategories from "../Shared/ProductCategories";

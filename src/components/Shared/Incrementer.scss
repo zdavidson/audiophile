@@ -1,0 +1,31 @@
+.incrementer-container {
+  // General Styles
+  display: flex;
+  background-color: #f1f1f1;
+
+  button {
+    background-color: transparent;
+    color: grey;
+    padding: 0;
+  }
+  // Small Screens
+  @media screen and (max-width: 600px) {
+  }
+
+  // Medium Screens
+  @media screen and (min-width: 600px) and (max-width: 960px) {
+  }
+
+  // Large Screens
+  @media screen and (min-width: 960px) {
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+
+    .minus,
+    .count,
+    .plus {
+      padding: 0.5rem;
+    }
+  }
+}
