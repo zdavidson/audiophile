@@ -21,6 +21,15 @@
   .product-info {
     display: flex;
   }
+
+  .product-gallery {
+    display: flex;
+
+    img {
+      border-radius: 0.25rem;
+    }
+  }
+
   // Small Screens
   @media screen and (max-width: 600px) {
     .product-info {
@@ -37,6 +46,18 @@
     #features {
       width: 65%;
       padding-right: 3rem;
+    }
+
+    .product-gallery {
+      justify-content: space-between;
+
+      margin: 8rem 0;
+    }
+
+    #image-div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
   }
 }

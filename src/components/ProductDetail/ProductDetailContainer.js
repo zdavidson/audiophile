@@ -42,8 +42,10 @@ const ProductDetailContainer = (props) => {
         </div>
       </div>
       <div className="product-gallery">
-        <img src={item.gallery.first.desktop} alt="" />
-        <img src={item.gallery.second.desktop} alt="" />
+        <div id="image-div">
+          <img src={item.gallery.first.desktop} alt="" />
+          <img src={item.gallery.second.desktop} alt="" />
+        </div>
         <img src={item.gallery.third.desktop} alt="" />
       </div>
     </Container>
