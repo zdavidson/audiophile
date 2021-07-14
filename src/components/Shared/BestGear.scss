@@ -19,7 +19,20 @@
   }
   // Small Screens
   @media screen and (max-width: 600px) {
-    display: none;
+    flex-direction: column;
+    margin: 15vh 0;
+
+    #best-gear-img {
+      order: -1;
+    }
+
+    #best-gear-text {
+      text-align: center;
+    }
+
+    h2 {
+      margin: 2rem 0;
+    }
   }
 
   // Medium Screens
