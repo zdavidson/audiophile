@@ -4,12 +4,17 @@ import Container from "react-bootstrap/Container";
 import "./Navigation.scss";
 import { NavLink } from "react-router-dom";
 
-const Navigation = ({ viewCart, setCartView }) => {
+const Navigation = ({ viewCart, setCartView, isOpen, setIsOpen }) => {
   return (
     <div className="navigation">
       <Container>
         <NavBar id="nav-bar">
-          <div id="hamburger-icon"></div>
+          <div
+            id="hamburger-icon"
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+          ></div>
 
           <NavLink id="logo" to="/">
             <img src="./assets/shared/logo.svg" alt="logo" />

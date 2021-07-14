@@ -1,0 +1,55 @@
+@keyframes menu {
+  from {
+    opacity: 0;
+    transform: translateX(-100vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0vw);
+  }
+}
+
+#mobile-menu-bg {
+  @media screen and (max-width: 600px) {
+    height: 590vh;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.459);
+
+    position: absolute;
+    top: 8.9vh;
+
+    z-index: 3;
+    padding: 0;
+    margin: 0;
+
+    transition: menu 2s;
+
+    animation: menu 2s forwards;
+  }
+}
+
+#mobile-menu {
+  // General Styles
+
+  // Small Screens
+  @media screen and (max-width: 600px) {
+    height: 125vh;
+    width: 100vw;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    position: absolute;
+    top: 4.5rem;
+    z-index: 5;
+    transition: menu 2s;
+
+    animation: menu 2s forwards;
+  }
+
+  // Medium Screens
+  @media screen and (min-width: 600px) and (max-width: 960px) {
+  }
+
+  // Large Screens
+  @media screen and (min-width: 960px) {
+  }
+}

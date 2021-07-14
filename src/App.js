@@ -8,16 +8,26 @@ import ProductDetailContainer from "./components/ProductDetail/ProductDetailCont
 import CartView from "./components/Shared/Cart/CartView";
 import { useState } from "react";
 import Checkout from "./components/Checkout/Checkout";
+import MobileMenu from "./components/Shared/MobileMenu";
 
 const App = () => {
   const [viewCart, setCartView] = useState(false);
   const [cartItems, setCartItems] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Router>
       <div className="App">
-        <Navigation viewCart={viewCart} setCartView={setCartView} />
+        <Navigation
+          viewCart={viewCart}
+          setCartView={setCartView}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+        />
         {viewCart ? <CartView cartItems={cartItems} /> : <div></div>}
+
+        {isOpen ? <MobileMenu setIsOpen={setIsOpen} /> : <div></div>}
+
         <Route exact path="/" component={Home} />
         <Route exact path="/checkout" component={Checkout} />
         <Route exact path="/headphones" component={CategoryContainer} />
