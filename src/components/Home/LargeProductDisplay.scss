@@ -3,12 +3,9 @@
   background-color: #d87d4a;
   background-image: url("../../assets/images/pattern-circles.svg");
   background-repeat: no-repeat;
-  background-position-x: -10rem;
+
   border-radius: 0.25rem;
   display: flex;
-
-  justify-content: space-evenly;
-  padding-top: 7rem;
 
   h2 {
     text-transform: uppercase;
@@ -22,16 +19,38 @@
     background-color: #383838;
   }
 
-  #large-product-image img {
-    width: 25rem;
-
-    margin: 0 8rem;
-    margin-bottom: 0;
-  }
-
   // Small Screens
   @media screen and (max-width: 600px) {
+    text-align: center;
     flex-direction: column;
+    align-items: center;
+    background-position-x: center;
+    background-position-y: -5.5rem;
+    background-size: cover;
+    padding: 2rem 1rem;
+    margin: 1.5rem 0;
+
+    #large-product-image img {
+      width: 10rem;
+      padding: 1.5rem 0;
+    }
+
+    h2 {
+      font-size: 3rem;
+      letter-spacing: 0.25rem;
+      margin: 1rem 0;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 2rem;
+      padding: 1rem 0;
+      font-weight: 200;
+    }
+
+    button {
+      margin-bottom: 1rem;
+    }
   }
 
   // Medium Screens
@@ -40,6 +59,10 @@
 
   // Large Screens
   @media screen and (min-width: 960px) {
+    background-position-x: -10rem;
+    justify-content: space-evenly;
+    padding-top: 7rem;
+
     button {
       margin-bottom: 5rem;
     }
@@ -56,6 +79,14 @@
       margin-right: 10rem;
       font-weight: 200;
     }
+
+    #large-product-image img {
+      width: 25rem;
+
+      margin: 0 8rem;
+      margin-bottom: 0;
+    }
+
     #large-product-text {
       width: 45%;
     }

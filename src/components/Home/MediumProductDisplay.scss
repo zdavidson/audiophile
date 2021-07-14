@@ -1,6 +1,5 @@
 #medium-product-home {
   // General Styles
-  background-image: url("../../assets/images/image-speaker-zx7.jpg");
   border-radius: 0.25rem;
   display: flex;
   text-transform: uppercase;
@@ -18,7 +17,22 @@
 
   // Small Screens
   @media screen and (max-width: 600px) {
+    background-image: url("../../assets/images/mobile/image-speaker-zx7.jpg");
     flex-direction: column;
+    height: 45vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    justify-content: center;
+    margin: 1rem 0;
+
+    #medium-product-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: 35vh;
+      padding: 5rem 1.5rem;
+    }
   }
 
   // Medium Screens
@@ -27,6 +41,7 @@
 
   // Large Screens
   @media screen and (min-width: 960px) {
+    background-image: url("../../assets/images/image-speaker-zx7.jpg");
     height: 39vh;
     margin-top: 4rem;
 
