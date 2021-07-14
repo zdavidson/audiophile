@@ -10,7 +10,7 @@ const SmallProductDisplay = () => {
       <div id="small-product-text">
         <h2>YX1 Earphones</h2>
         <Link to="/earphones/yx1-earphones" target="_top">
-          ><button>See Product</button>
+          <button>See Product</button>
         </Link>
       </div>
     </div>
