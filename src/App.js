@@ -11,12 +11,13 @@ import Checkout from "./components/Checkout/Checkout";
 
 const App = () => {
   const [viewCart, setCartView] = useState(false);
+  const [cartItems, setCartItems] = useState([]);
 
   return (
     <Router>
       <div className="App">
         <Navigation viewCart={viewCart} setCartView={setCartView} />
-        {viewCart ? <CartView /> : <div></div>}
+        {viewCart ? <CartView cartItems={cartItems} /> : <div></div>}
         <Route exact path="/" component={Home} />
         <Route exact path="/checkout" component={Checkout} />
         <Route exact path="/headphones" component={CategoryContainer} />
@@ -25,17 +26,29 @@ const App = () => {
         <Route
           exact
           path="/headphones/:name"
-          component={ProductDetailContainer}
+          render={(props) => (
+            <ProductDetailContainer {...props} setCartItems={setCartItems} />
+          )}
         />
         <Route
           exact
           path="/speakers/:name"
-          component={ProductDetailContainer}
+          render={(routeProps) => (
+            <ProductDetailContainer
+              {...routeProps}
+              setCartItems={setCartItems}
+            />
+          )}
         />
         <Route
           exact
           path="/earphones/:name"
-          component={ProductDetailContainer}
+          render={(routeProps) => (
+            <ProductDetailContainer
+              {...routeProps}
+              setCartItems={setCartItems}
+            />
+          )}
         />
 
         <Footer />

@@ -22,7 +22,11 @@ const ProductDetailContainer = (props) => {
       <a href="/" alt="back">
         Go Back
       </a>
-      <ProductCard item={item} detail={true} />
+      <ProductCard
+        item={item}
+        detail={true}
+        setCartItems={props.setCartItems}
+      />
       <div className="product-info">
         <div id="features">
           <h3>Features</h3>

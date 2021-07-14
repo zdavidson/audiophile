@@ -2,7 +2,7 @@ import "./ProductCard.scss";
 import Incrementer from "./Incrementer";
 import { NavLink } from "react-router-dom";
 
-const ProductCard = ({ item, flip, detail }) => {
+const ProductCard = ({ item, flip, detail, setCartItems }) => {
   return (
     <div className="product-card">
       <img src={item.image.desktop} alt="" className={flip ? "flipImg" : ""} />
@@ -16,7 +16,11 @@ const ProductCard = ({ item, flip, detail }) => {
             <div>
               <form>
                 <Incrementer />
-                <button className="add-to-cart-button" type="button">
+                <button
+                  className="add-to-cart-button"
+                  type="button"
+                  onClick={() => setCartItems(item)}
+                >
                   Add To Cart
                 </button>
               </form>

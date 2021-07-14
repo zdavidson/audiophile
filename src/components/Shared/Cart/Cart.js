@@ -1,12 +1,27 @@
 import "./Cart.scss";
+import Incrementer from "../Incrementer";
 import { Link } from "react-router-dom";
 
-const Cart = () => {
+const Cart = ({ cartItems }) => {
   return (
     <div className="cart-bg">
       <div className="cart-headers">
         <h6>Cart</h6>
         <p>Remove All</p>
+      </div>
+      <div className="cart-items">
+        {cartItems.map((item) => {
+          return (
+            <div>
+              <div>{item.image.desktop}</div>
+              <div>
+                <h6>{item.name}</h6>
+                <p>{item.price}</p>
+              </div>
+              <Incrementer />
+            </div>
+          );
+        })}
       </div>
 
       <div className="cart-headers">
