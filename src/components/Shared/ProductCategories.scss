@@ -27,6 +27,27 @@
 
   // Small Screens
   @media screen and (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0.5rem;
+
+    .category {
+      height: 40vh;
+    }
+
+    .category-image {
+      width: 12.5rem;
+      position: relative;
+      top: 1.5rem;
+    }
+
+    .category-bg {
+      height: 100px;
+      position: relative;
+      bottom: 150px;
+      z-index: -5;
+      padding: 6rem 11rem;
+    }
   }
 
   // Medium Screens
