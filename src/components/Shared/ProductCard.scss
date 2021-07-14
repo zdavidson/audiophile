@@ -10,6 +10,10 @@
     }
   }
 
+  h3 {
+    color: #d87d4a;
+  }
+
   img {
     border-radius: 0.25rem;
   }
@@ -27,6 +31,40 @@
 
   // Small Screens
   @media screen and (max-width: 600px) {
+    flex-direction: column;
+    text-align: center;
+    margin: 4rem auto;
+
+    button {
+      margin: 1rem auto;
+      width: 50%;
+    }
+
+    img {
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      margin: 1rem 0;
+    }
+
+    h3 {
+      letter-spacing: 0.4em;
+      font-size: 1.25rem;
+      margin: 1rem 0;
+    }
+
+    p {
+      margin: 1rem 0;
+    }
+
+    .flipImg {
+      order: 0;
+    }
+
+    .product-text {
+      flex-direction: column;
+    }
   }
 
   // Medium Screens
@@ -45,7 +83,6 @@
     h3 {
       font-size: 1rem;
       letter-spacing: 1.2rem;
-      color: #d87d4a;
     }
 
     img {
