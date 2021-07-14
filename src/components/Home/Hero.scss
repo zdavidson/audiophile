@@ -1,9 +1,14 @@
 #hero-bg {
   // General Styles
-  background-image: url("../../assets/images/image-hero.jpg");
 
   // Small Screens
   @media screen and (max-width: 600px) {
+    background-image: url("../../assets/images/mobile/image-header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 70vh;
+    width: 100vw;
   }
 
   // Medium Screens
@@ -12,6 +17,7 @@
 
   // Large Screens
   @media screen and (min-width: 960px) {
+    background-image: url("../../assets/images/image-hero.jpg");
     height: 91.1vh;
   }
 }
@@ -30,6 +36,31 @@
 
   // Small Screens
   @media screen and (max-width: 600px) {
+    display: flex;
+
+    text-align: center;
+
+    h1 {
+      font-size: 2rem;
+      letter-spacing: 0.25rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+      letter-spacing: 0.5rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      line-height: 1.75rem;
+      padding: 1.5rem 0;
+    }
+
+    #hero-text {
+      width: 100%;
+
+      padding: 55% 0;
+    }
   }
 
   // Medium Screens
@@ -54,6 +85,7 @@
       padding: 1.5rem 0;
       margin-right: 8rem;
     }
+
     #hero-text {
       width: 45%;
 
