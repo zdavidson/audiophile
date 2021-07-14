@@ -9,7 +9,9 @@ const Navigation = ({ viewCart, setCartView }) => {
     <div className="navigation">
       <Container>
         <NavBar id="nav-bar">
-          <NavLink to="/">
+          <div id="hamburger-icon"></div>
+
+          <NavLink id="logo" to="/">
             <img src="./assets/shared/logo.svg" alt="logo" />
           </NavLink>
 
@@ -28,13 +30,13 @@ const Navigation = ({ viewCart, setCartView }) => {
             </NavLink>
           </Nav>
           <button
+            id="cart-icon"
             onClick={() => setCartView(!viewCart)}
             className="navigation-link"
             to="/"
           >
             <img src="./assets/shared/icon-cart.svg" alt="cart" />
           </button>
-          <span id="hamburger-icon"></span>
         </NavBar>
       </Container>
     </div>

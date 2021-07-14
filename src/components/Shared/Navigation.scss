@@ -31,12 +31,21 @@
       display: none;
     }
 
+    #cart-icon {
+      margin: 0 1rem;
+    }
+
     #hamburger-icon {
-      // background-image: url("../icon-hamburger.svg");
-      height: 1rem;
-      width: 3rem;
-      margin-left: auto;
+      background-image: url("../../assets/images/icon-hamburger.svg");
+      background-color: black;
+      height: 15px;
+      width: 40px;
+      margin: 0 1rem;
       z-index: 10;
+    }
+
+    #logo {
+      margin: 0 auto;
     }
   }
 
@@ -44,6 +53,14 @@
   @media screen and (min-width: 960px) {
     .nav-links {
       margin: auto;
+    }
+
+    #hamburger-icon {
+      width: 0;
+      padding: 0;
+      margin: 0;
+      height: 0;
+      display: none;
     }
   }
 }
