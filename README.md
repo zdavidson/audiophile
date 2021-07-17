@@ -4,6 +4,8 @@
 
 E-Commerce site for headphone lovers
 
+## Status
+
 _Work In Progress_
 
 ## Tech
