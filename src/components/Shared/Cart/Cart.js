@@ -1,8 +1,11 @@
 import "./Cart.scss";
 import Incrementer from "../Incrementer";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Cart = ({ cartItems }) => {
+  const { items } = useSelector((state) => state.items);
+
   return (
     <div className="cart-bg">
       <div className="cart-headers">
@@ -10,7 +13,7 @@ const Cart = ({ cartItems }) => {
         <p>Remove All</p>
       </div>
       <div className="cart-items">
-        {cartItems.map((item) => {
+        {/* {items.map((item) => {
           return (
             <div>
               <div>{item.image.desktop}</div>
@@ -21,7 +24,16 @@ const Cart = ({ cartItems }) => {
               <Incrementer />
             </div>
           );
-        })}
+        })} */}
+
+        <div>
+          <div>{/* <img src={items.image.desktop} alt="" /> */}[PIC]</div>
+          <div>
+            <h6>{items.name}</h6>
+            <p>${items.price}.00</p>
+          </div>
+          <Incrementer />
+        </div>
       </div>
 
       <div className="cart-headers">

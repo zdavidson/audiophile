@@ -1,8 +1,12 @@
 import "./ProductCard.scss";
 import Incrementer from "./Incrementer";
 import { NavLink } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../store/items";
 
 const ProductCard = ({ item, flip, detail, setCartItems }) => {
+  const dispatch = useDispatch();
+
   return (
     <div className="product-card">
       <img src={item.image.desktop} alt="" className={flip ? "flipImg" : ""} />
@@ -19,7 +23,10 @@ const ProductCard = ({ item, flip, detail, setCartItems }) => {
                 <button
                   className="add-to-cart-button"
                   type="button"
-                  onClick={() => setCartItems(item)}
+                  onClick={() => {
+                    setCartItems(item);
+                    dispatch(addToCart(item));
+                  }}
                 >
                   Add To Cart
                 </button>
