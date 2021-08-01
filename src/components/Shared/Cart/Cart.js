@@ -16,18 +16,18 @@ const Cart = () => {
       </div>
       <div className="cart-items">
         {cartItems.length > 1 ? (
-          cartItems.map((item, itemIdx) => {
+          cartItems.map((cartItem, itemIdx) => {
             return (
               <div className="cart-item" key={itemIdx}>
                 <div className="cart-image-title">
                   <img
                     className="cart-item-image"
-                    src={item.item.image.mobile}
+                    src={cartItem.item.image.mobile}
                     alt="cart-item"
                   />
                   <div>
-                    <h6>{item.item.name.split(` Headphones`)}</h6>
-                    <p>${item.item.price}.00</p>
+                    <h6>{cartItem.item.name.split(` Headphones`)}</h6>
+                    <p>${cartItem.item.price}.00</p>
                   </div>
                 </div>
                 <Incrementer />
@@ -50,34 +50,6 @@ const Cart = () => {
             <Incrementer />
           </div>
         )}
-
-        {/* {items.map((item) => {
-          return (
-            <div>
-              <div>{item.image.desktop}</div>
-              <div>
-                <h6>{item.name}</h6>
-                <p>{item.price}</p>
-              </div>
-              <Incrementer />
-            </div>
-          );
-        })} */}
-
-        {/* <div className="cart-item">
-          <div className="cart-image-title">
-            <img
-              className="cart-item-image"
-              src={item.image.mobile}
-              alt="cart-item"
-            />
-            <div>
-              <h6>{item.name.split(` Headphones`)}</h6>
-              <p>${item.price}.00</p>
-            </div>
-          </div>
-          <Incrementer />
-        </div> */}
       </div>
 
       <div className="cart-headers">
