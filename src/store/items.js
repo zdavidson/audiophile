@@ -21,34 +21,3 @@ export const itemsSlice = createSlice({
 export const { addToCart, removeFromCart, updateAmount } = itemsSlice.actions;
 
 export default itemsSlice.reducer;
-
-// const SET_ITEMS = "SET_ITEMS";
-
-// export const setItems = (items) => {
-//   return {
-//     type: SET_ITEMS,
-//     items,
-//   };
-// };
-
-// export const fetchItems = () => {
-//   return async (dispatch) => {
-//     try {
-//       const { data } = require("../assets/data");
-//       dispatch(setItems(data));
-//     } catch (err) {
-//       console.log(err);
-//     }
-//   };
-// };
-
-// const initialState = [];
-
-// export default (state = initialState, action) => {
-//   switch (action.type) {
-//     case SET_ITEMS:
-//       return action.items;
-//     default:
-//       return state;
-//   }
-// };

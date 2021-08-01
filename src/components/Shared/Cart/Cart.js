@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const Cart = ({ cartItems }) => {
   const { items } = useSelector((state) => state.items);
+  console.log(items);
 
   return (
     <div className="cart-bg">
@@ -26,11 +27,17 @@ const Cart = ({ cartItems }) => {
           );
         })} */}
 
-        <div>
-          <div>{/* <img src={items.image.desktop} alt="" /> */}[PIC]</div>
-          <div>
-            <h6>{items.name}</h6>
-            <p>${items.price}.00</p>
+        <div className="cart-item">
+          <div className="cart-image-title">
+            <img
+              className="cart-item-image"
+              src={items.image.mobile}
+              alt="cart-item"
+            />
+            <div>
+              <h6>{items.name.split(` Headphones`)}</h6>
+              <p>${items.price}.00</p>
+            </div>
           </div>
           <Incrementer />
         </div>
