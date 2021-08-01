@@ -23,9 +23,9 @@ const App = () => {
           isOpen={isOpen}
           setIsOpen={setIsOpen}
         />
-        {viewCart ? <CartView /> : <div></div>}
+        {viewCart && <CartView />}
 
-        {isOpen ? <MobileMenu setIsOpen={setIsOpen} /> : <div></div>}
+        {isOpen && <MobileMenu setIsOpen={setIsOpen} />}
 
         <Route exact path="/" component={Home} />
         <Route exact path="/checkout" component={Checkout} />
