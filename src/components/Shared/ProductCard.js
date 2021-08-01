@@ -5,6 +5,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../../store/cart";
 import { addToTotal } from "../../store/totalPrice";
 import { resetGlobalCount } from "../../store/globalCount";
+import { resetItemCount } from "../../store/items";
+import { addToTotalCount } from "../../store/totalCount";
 
 const ProductCard = ({ item, flip, detail }) => {
   const { itemCount } = useSelector((state) => state.items.items);
@@ -30,7 +32,9 @@ const ProductCard = ({ item, flip, detail }) => {
                   onClick={() => {
                     dispatch(addToCart({ item, itemCount }));
                     dispatch(addToTotal(item.price * itemCount));
+                    dispatch(addToTotalCount(itemCount));
                     dispatch(resetGlobalCount());
+                    dispatch(resetItemCount());
                   }}
                 >
                   Add To Cart
