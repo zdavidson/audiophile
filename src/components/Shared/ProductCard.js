@@ -4,9 +4,11 @@ import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../../store/cart";
 import { addToTotal } from "../../store/totalPrice";
+import { resetGlobalCount } from "../../store/globalCount";
 
 const ProductCard = ({ item, flip, detail }) => {
-  const { count } = useSelector((state) => state.items.items);
+  const { itemCount } = useSelector((state) => state.items.items);
+  const isGlobal = true;
   const dispatch = useDispatch();
 
   return (
@@ -21,13 +23,14 @@ const ProductCard = ({ item, flip, detail }) => {
             <p>${item.price}.00</p>
             <div>
               <form>
-                <Incrementer />
+                <Incrementer isGlobal={isGlobal} />
                 <button
                   className="add-to-cart-button"
                   type="button"
                   onClick={() => {
-                    dispatch(addToCart({ item, count }));
-                    dispatch(addToTotal(item.price * count));
+                    dispatch(addToCart({ item, itemCount }));
+                    dispatch(addToTotal(item.price * itemCount));
+                    dispatch(resetGlobalCount());
                   }}
                 >
                   Add To Cart

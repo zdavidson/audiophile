@@ -3,14 +3,14 @@ import { createSlice } from "@reduxjs/toolkit";
 export const itemsSlice = createSlice({
   name: "items",
   initialState: {
-    items: { item: {}, count: 0 },
+    items: { item: {}, itemCount: 0 },
   },
   reducers: {
     increaseItems: (state) => {
-      state.items.count += 1;
+      state.items.itemCount += 1;
     },
     decreaseItems: (state) => {
-      state.items.count -= 1;
+      state.items.itemCount -= 1;
     },
     removeFromCart: (state) => {
       state.items -= 1;

@@ -5,16 +5,18 @@ import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { items } = useSelector((state) => state.items);
-  const { count } = items;
+  const { itemCount } = items;
   const { cartItems } = useSelector((state) => state.cart);
   const totalPrice = useSelector((state) => state.totalPrice.totalPrice);
+  const isGlobal = false;
+
   console.log(totalPrice);
 
   console.log("Cart Items", cartItems);
   return (
     <div className="cart-bg">
       <div className="cart-headers">
-        <h6>Cart ({count})</h6>
+        <h6>Cart ({itemCount})</h6>
         <p>Remove All</p>
       </div>
       <div className="cart-items">
@@ -33,7 +35,7 @@ const Cart = () => {
                     <p>${cartItem.item.price}.00</p>
                   </div>
                 </div>
-                <Incrementer />
+                <Incrementer isGlobal={isGlobal} />
               </div>
             );
           })
