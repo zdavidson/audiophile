@@ -2,13 +2,11 @@ import "./ProductCard.scss";
 import Incrementer from "./Incrementer";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { addToCart } from "../../store/items";
-import { addToCartCartItems } from "../../store/cart";
+import { addToCart } from "../../store/cart";
+import { addToTotal } from "../../store/totalPrice";
 
 const ProductCard = ({ item, flip, detail }) => {
   const { count } = useSelector((state) => state.items.items);
-  // const { items } = useSelector((state) => state.items);
-
   const dispatch = useDispatch();
 
   return (
@@ -29,7 +27,7 @@ const ProductCard = ({ item, flip, detail }) => {
                   type="button"
                   onClick={() => {
                     dispatch(addToCart({ item, count }));
-                    dispatch(addToCartCartItems({ item, count }));
+                    dispatch(addToTotal(item.price * count));
                   }}
                 >
                   Add To Cart

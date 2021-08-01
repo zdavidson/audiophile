@@ -6,9 +6,6 @@ export const itemsSlice = createSlice({
     items: { item: {}, count: 0 },
   },
   reducers: {
-    addToCart: (state, action) => {
-      state.items = action.payload;
-    },
     increaseItems: (state) => {
       state.items.count += 1;
     },
@@ -24,12 +21,7 @@ export const itemsSlice = createSlice({
   },
 });
 
-export const {
-  addToCart,
-  increaseItems,
-  decreaseItems,
-  removeFromCart,
-  updateAmount,
-} = itemsSlice.actions;
+export const { increaseItems, decreaseItems, removeFromCart, updateAmount } =
+  itemsSlice.actions;
 
 export default itemsSlice.reducer;

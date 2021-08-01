@@ -5,8 +5,11 @@ import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { items } = useSelector((state) => state.items);
-  const { item, count } = items;
+  const { count } = items;
   const { cartItems } = useSelector((state) => state.cart);
+  const totalPrice = useSelector((state) => state.totalPrice.totalPrice);
+  console.log(totalPrice);
+
   console.log("Cart Items", cartItems);
   return (
     <div className="cart-bg">
@@ -39,12 +42,12 @@ const Cart = () => {
             <div className="cart-image-title">
               <img
                 className="cart-item-image"
-                src={item.image.mobile}
+                src={cartItems[0].item.image.mobile}
                 alt="cart-item"
               />
               <div>
-                <h6>{item.name.split(` Headphones`)}</h6>
-                <p>${item.price}.00</p>
+                <h6>{cartItems[0].item.name.split(` Headphones`)}</h6>
+                <p>${cartItems[0].item.price}.00</p>
               </div>
             </div>
             <Incrementer />
@@ -54,7 +57,7 @@ const Cart = () => {
 
       <div className="cart-headers">
         <h6>Total</h6>
-        <p>$$$</p>
+        <p>${totalPrice}.00</p>
       </div>
       <Link to="/checkout" target="_top">
         <button>Checkout</button>
