@@ -2,7 +2,7 @@
 
 ## Description
 
-E-Commerce site for headphone lovers
+E-Commerce site for audio lovers
 
 ## Status
 

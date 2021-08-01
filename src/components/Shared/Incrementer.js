@@ -1,18 +1,21 @@
 import "./Incrementer.scss";
-import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { increaseItems, decreaseItems } from "../../store/items";
 
 const Incrementer = () => {
-  let [count, setCount] = useState(0);
+  const { count } = useSelector((state) => state.items.items);
+  const dispatch = useDispatch();
+
   return (
     <div className="incrementer-container">
       <div className="minus">
-        <button onClick={() => setCount(count - 1)} type="button">
+        <button onClick={() => dispatch(decreaseItems(count))} type="button">
           -
         </button>
       </div>
       <div className="count">{count}</div>
       <div className="plus">
-        <button onClick={() => setCount(count + 1)} type="button">
+        <button onClick={() => dispatch(increaseItems(count))} type="button">
           +
         </button>
       </div>

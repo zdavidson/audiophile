@@ -1,10 +1,11 @@
 import "./ProductCard.scss";
 import Incrementer from "./Incrementer";
 import { NavLink } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../../store/items";
 
 const ProductCard = ({ item, flip, detail }) => {
+  const { count } = useSelector((state) => state.items.items);
   const dispatch = useDispatch();
 
   return (
@@ -24,7 +25,7 @@ const ProductCard = ({ item, flip, detail }) => {
                   className="add-to-cart-button"
                   type="button"
                   onClick={() => {
-                    dispatch(addToCart(item));
+                    dispatch(addToCart({ item, count }));
                   }}
                 >
                   Add To Cart
