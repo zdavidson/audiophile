@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/items";
 
-const ProductCard = ({ item, flip, detail, setCartItems }) => {
+const ProductCard = ({ item, flip, detail }) => {
   const dispatch = useDispatch();
 
   return (
@@ -24,7 +24,6 @@ const ProductCard = ({ item, flip, detail, setCartItems }) => {
                   className="add-to-cart-button"
                   type="button"
                   onClick={() => {
-                    setCartItems(item);
                     dispatch(addToCart(item));
                   }}
                 >

@@ -12,7 +12,6 @@ import MobileMenu from "./components/Shared/MobileMenu";
 
 const App = () => {
   const [viewCart, setCartView] = useState(false);
-  const [cartItems, setCartItems] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -24,7 +23,7 @@ const App = () => {
           isOpen={isOpen}
           setIsOpen={setIsOpen}
         />
-        {viewCart ? <CartView cartItems={cartItems} /> : <div></div>}
+        {viewCart ? <CartView /> : <div></div>}
 
         {isOpen ? <MobileMenu setIsOpen={setIsOpen} /> : <div></div>}
 
@@ -36,29 +35,17 @@ const App = () => {
         <Route
           exact
           path="/headphones/:name"
-          render={(props) => (
-            <ProductDetailContainer {...props} setCartItems={setCartItems} />
-          )}
+          render={(props) => <ProductDetailContainer {...props} />}
         />
         <Route
           exact
           path="/speakers/:name"
-          render={(routeProps) => (
-            <ProductDetailContainer
-              {...routeProps}
-              setCartItems={setCartItems}
-            />
-          )}
+          render={(props) => <ProductDetailContainer {...props} />}
         />
         <Route
           exact
           path="/earphones/:name"
-          render={(routeProps) => (
-            <ProductDetailContainer
-              {...routeProps}
-              setCartItems={setCartItems}
-            />
-          )}
+          render={(props) => <ProductDetailContainer {...props} />}
         />
 
         <Footer />

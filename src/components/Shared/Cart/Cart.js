@@ -3,7 +3,7 @@ import Incrementer from "../Incrementer";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-const Cart = ({ cartItems }) => {
+const Cart = () => {
   const { items } = useSelector((state) => state.items);
   console.log(items);
 
