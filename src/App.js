@@ -1,14 +1,11 @@
 import "./App.scss";
-import Navigation from "./components/Shared/Navigation";
-import Footer from "./components/Shared/Footer";
-import Home from "./components/Home/Home";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { useState } from "react";
+import { CartView, Footer, MobileMenu, Navigation } from "./components/Shared";
+import Home from "./components/Home/Home";
 import CategoryContainer from "./components/Products/CategoryContainer";
 import ProductDetailContainer from "./components/ProductDetail/ProductDetailContainer";
-import CartView from "./components/Shared/Cart/CartView";
-import { useState } from "react";
 import Checkout from "./components/Checkout/Checkout";
-import MobileMenu from "./components/Shared/MobileMenu";
 
 const App = () => {
   const [viewCart, setCartView] = useState(false);
