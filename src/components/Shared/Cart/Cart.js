@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 const Cart = () => {
   const { items } = useSelector((state) => state.items);
   const { item, count } = items;
-  console.log(items);
-
+  const { cartItems } = useSelector((state) => state.cart);
+  console.log("Cart Items", cartItems);
   return (
     <div className="cart-bg">
       <div className="cart-headers">
@@ -15,6 +15,42 @@ const Cart = () => {
         <p>Remove All</p>
       </div>
       <div className="cart-items">
+        {cartItems.length > 1 ? (
+          cartItems.map((item, itemIdx) => {
+            return (
+              <div className="cart-item" key={itemIdx}>
+                <div className="cart-image-title">
+                  <img
+                    className="cart-item-image"
+                    src={item.item.image.mobile}
+                    alt="cart-item"
+                  />
+                  <div>
+                    <h6>{item.item.name.split(` Headphones`)}</h6>
+                    <p>${item.item.price}.00</p>
+                  </div>
+                </div>
+                <Incrementer />
+              </div>
+            );
+          })
+        ) : (
+          <div className="cart-item">
+            <div className="cart-image-title">
+              <img
+                className="cart-item-image"
+                src={item.image.mobile}
+                alt="cart-item"
+              />
+              <div>
+                <h6>{item.name.split(` Headphones`)}</h6>
+                <p>${item.price}.00</p>
+              </div>
+            </div>
+            <Incrementer />
+          </div>
+        )}
+
         {/* {items.map((item) => {
           return (
             <div>
@@ -28,7 +64,7 @@ const Cart = () => {
           );
         })} */}
 
-        <div className="cart-item">
+        {/* <div className="cart-item">
           <div className="cart-image-title">
             <img
               className="cart-item-image"
@@ -41,7 +77,7 @@ const Cart = () => {
             </div>
           </div>
           <Incrementer />
-        </div>
+        </div> */}
       </div>
 
       <div className="cart-headers">

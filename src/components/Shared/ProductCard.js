@@ -3,9 +3,12 @@ import Incrementer from "./Incrementer";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../../store/items";
+import { addToCartCartItems } from "../../store/cart";
 
 const ProductCard = ({ item, flip, detail }) => {
   const { count } = useSelector((state) => state.items.items);
+  // const { items } = useSelector((state) => state.items);
+
   const dispatch = useDispatch();
 
   return (
@@ -26,6 +29,7 @@ const ProductCard = ({ item, flip, detail }) => {
                   type="button"
                   onClick={() => {
                     dispatch(addToCart({ item, count }));
+                    dispatch(addToCartCartItems({ item, count }));
                   }}
                 >
                   Add To Cart
