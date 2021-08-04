@@ -3,7 +3,7 @@
   background-color: #fff;
   border-radius: 0.25rem;
 
-  height: 45vh;
+  height: fit-content;
 
   .summary-details {
     display: flex;
@@ -14,6 +14,33 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+
+    h6 {
+      color: rgb(128, 128, 128);
+    }
+  }
+
+  .summary-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .summary-item-count {
+    color: rgb(128, 128, 128);
+  }
+
+  #grand-total {
+    margin: 1rem 0;
+
+    p {
+      color: #d87d4a;
+    }
+  }
+
+  #summary-cart-items {
+    margin-top: 1rem;
   }
 
   // Small Screens
