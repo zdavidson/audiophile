@@ -2,7 +2,7 @@ import "./ProductCard.scss";
 import Incrementer from "./Incrementer";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { addToCart } from "../../store/cart";
+import { addToCart, startNewCart } from "../../store/cart";
 import { addToTotal } from "../../store/totalPrice";
 import { resetGlobalCount } from "../../store/globalCount";
 import { resetItemCount } from "../../store/items";
@@ -10,6 +10,7 @@ import { addToTotalCount } from "../../store/totalCount";
 
 const ProductCard = ({ item, flip, detail }) => {
   const { itemCount } = useSelector((state) => state.items.items);
+  const { cartItems } = useSelector((state) => state.cart);
   const isGlobal = true;
   const dispatch = useDispatch();
 
@@ -30,6 +31,9 @@ const ProductCard = ({ item, flip, detail }) => {
                   className="add-to-cart-button"
                   type="button"
                   onClick={() => {
+                    if (cartItems[0].item.name === "") {
+                      dispatch(startNewCart(item, itemCount));
+                    }
                     dispatch(addToCart({ item, itemCount }));
                     dispatch(addToTotal(item.price * itemCount));
                     dispatch(addToTotalCount(itemCount));
