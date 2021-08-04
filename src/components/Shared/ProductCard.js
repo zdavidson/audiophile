@@ -6,7 +6,7 @@ import { addToCart, startNewCart } from "../../store/cart";
 import { addToTotal } from "../../store/totalPrice";
 import { resetGlobalCount } from "../../store/globalCount";
 import { resetItemCount } from "../../store/items";
-import { addToTotalCount } from "../../store/totalCount";
+import { addToCartCount } from "../../store/cartCount";
 
 const ProductCard = ({ item, flip, detail }) => {
   const { itemCount } = useSelector((state) => state.items.items);
@@ -36,7 +36,7 @@ const ProductCard = ({ item, flip, detail }) => {
                     }
                     dispatch(addToCart({ item, itemCount }));
                     dispatch(addToTotal(item.price * itemCount));
-                    dispatch(addToTotalCount(itemCount));
+                    dispatch(addToCartCount(itemCount));
                     dispatch(resetGlobalCount());
                     dispatch(resetItemCount());
                   }}

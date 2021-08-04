@@ -3,8 +3,10 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import "./Navigation.scss";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Navigation = ({ viewCart, setCartView, isOpen, setIsOpen }) => {
+  const { cartCount } = useSelector((state) => state.cartCount);
   return (
     <div className="navigation">
       <Container>
@@ -40,7 +42,7 @@ const Navigation = ({ viewCart, setCartView, isOpen, setIsOpen }) => {
             className="navigation-link"
             to="/"
           >
-            <img src="./assets/shared/icon-cart.svg" alt="cart" />
+            <img src="./assets/shared/icon-cart.svg" alt="cart" /> ({cartCount})
           </button>
         </NavBar>
       </Container>

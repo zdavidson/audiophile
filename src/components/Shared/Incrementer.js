@@ -4,6 +4,7 @@ import { increaseItems, decreaseItems } from "../../store/items";
 import { increaseCartItem, decreaseCartItem } from "../../store/cart";
 import { addToGlobalCount } from "../../store/globalCount";
 import { addToTotal, removeFromTotal } from "../../store/totalPrice";
+import { lowerCartCount, raiseCartCount } from "../../store/cartCount";
 
 const Incrementer = ({ isGlobal, itemIdx }) => {
   const { itemCount } = useSelector((state) => state.items.items);
@@ -43,6 +44,7 @@ const Incrementer = ({ isGlobal, itemIdx }) => {
               onClick={() => {
                 dispatch(decreaseCartItem(itemIdx));
                 dispatch(removeFromTotal(cartItems[itemIdx].item.price));
+                dispatch(lowerCartCount());
               }}
               type="button"
             >
@@ -55,6 +57,7 @@ const Incrementer = ({ isGlobal, itemIdx }) => {
               onClick={() => {
                 dispatch(increaseCartItem(itemIdx));
                 dispatch(addToTotal(cartItems[itemIdx].item.price));
+                dispatch(raiseCartCount());
               }}
               type="button"
             >

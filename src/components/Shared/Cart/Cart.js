@@ -5,14 +5,18 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { clearExistingCart } from "../../../store/cart";
 import { useDispatch } from "react-redux";
+import { resetTotalPrice } from "../../../store/totalPrice";
+import { resetCartCount } from "../../../store/cartCount";
 
 const Cart = () => {
   const { cartItems } = useSelector((state) => state.cart);
-  const totalPrice = useSelector((state) => state.totalPrice.totalPrice);
+  const { totalPrice } = useSelector((state) => state.totalPrice);
+  const { cartCount } = useSelector((state) => state.cartCount);
   const isGlobal = false;
   const dispatch = useDispatch();
 
   console.log("Cart Items", cartItems);
+  console.log("Cart Count", cartCount);
 
   if (cartItems[0].item.name === "") {
     return (
@@ -24,6 +28,8 @@ const Cart = () => {
             type="button"
             onClick={() => {
               dispatch(clearExistingCart());
+              dispatch(resetTotalPrice());
+              dispatch(resetCartCount());
             }}
           >
             Remove All
@@ -47,18 +53,14 @@ const Cart = () => {
     return (
       <div className="cart-bg">
         <div className="cart-headers">
-          <h6>
-            Cart (
-            {cartItems.length > 1
-              ? cartItems.map((item) => item.itemCount)
-              : cartItems[0].itemCount}
-            )
-          </h6>
+          <h6>Cart ({cartCount})</h6>
           <button
             id="remove-all-btn"
             type="button"
             onClick={() => {
               dispatch(clearExistingCart());
+              dispatch(resetTotalPrice());
+              dispatch(resetCartCount());
             }}
           >
             Remove All
