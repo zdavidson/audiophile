@@ -3,11 +3,14 @@ import Incrementer from "../Incrementer";
 import ItemDisplaySmall from "../ItemDisplaySmall";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { clearExistingCart } from "../../../store/cart";
+import { useDispatch } from "react-redux";
 
 const Cart = () => {
   const { cartItems } = useSelector((state) => state.cart);
   const totalPrice = useSelector((state) => state.totalPrice.totalPrice);
   const isGlobal = false;
+  const dispatch = useDispatch();
 
   console.log("Cart Items", cartItems);
 
@@ -29,7 +32,15 @@ const Cart = () => {
               : cartItems[0].itemCount}
             )
           </h6>
-          <p>Remove All</p>
+          <button
+            id="remove-all-btn"
+            type="button"
+            onClick={() => {
+              dispatch(clearExistingCart());
+            }}
+          >
+            Remove All
+          </button>
         </div>
         <div className="cart-items">
           {cartItems.length > 1 ? (

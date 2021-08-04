@@ -37,6 +37,17 @@
   .cart-headers {
     display: flex;
   }
+
+  #remove-all-btn {
+    background-color: transparent;
+    color: black;
+    padding: 0;
+    width: fit-content;
+  }
+
+  #remove-all-btn:hover {
+    color: #d87d4a;
+  }
   // Small Screens
   @media screen and (max-width: 600px) {
   }
