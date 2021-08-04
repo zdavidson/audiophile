@@ -1,6 +1,6 @@
 import "./Checkout.scss";
 import Container from "react-bootstrap/Container";
-// import Summary from "./Summary";
+import Summary from "./Summary";
 
 const Checkout = () => {
   return (
@@ -51,7 +51,7 @@ const Checkout = () => {
           </form>
         </div>
 
-        {/* <Summary /> */}
+        <Summary />
       </Container>
     </div>
   );

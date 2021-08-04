@@ -1,8 +1,8 @@
 import "./ItemDisplaySmall.scss";
 
-const ItemDisplaySmall = ({ cartItem }) => {
+const ItemDisplaySmall = ({ cartItem, checkout }) => {
   return (
-    <div className="cart-image-title">
+    <div className={`cart-image-title ${checkout ? "summary-item" : ""}`}>
       <img
         className="cart-item-image"
         src={cartItem.item.image.mobile}

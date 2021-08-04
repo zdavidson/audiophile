@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 const Summary = () => {
   const { cartItems } = useSelector((state) => state.cart);
   const totalPrice = useSelector((state) => state.totalPrice.totalPrice);
+  const checkout = true;
   console.log(cartItems);
 
   return (
@@ -13,7 +14,12 @@ const Summary = () => {
       <div id="summary-cart-items">
         {cartItems.length > 1 ? (
           cartItems.map((cartItem) => {
-            return <ItemDisplaySmall cartItem={cartItem} />;
+            return (
+              <>
+                <ItemDisplaySmall cartItem={cartItem} checkout={checkout} />{" "}
+                {cartItem.itemCount}
+              </>
+            );
           })
         ) : (
           <ItemDisplaySmall cartItem={cartItems[0]} />
