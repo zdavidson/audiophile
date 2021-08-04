@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 
 const Navigation = ({ viewCart, setCartView, isOpen, setIsOpen }) => {
   const { cartCount } = useSelector((state) => state.cartCount);
+
   return (
     <div className="navigation">
       <Container>
