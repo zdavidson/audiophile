@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { increaseItems, decreaseItems } from "../../store/items";
 import { increaseCartItem, decreaseCartItem } from "../../store/cart";
 import { addToGlobalCount } from "../../store/globalCount";
+import { addToTotal, removeFromTotal } from "../../store/totalPrice";
 
 const Incrementer = ({ isGlobal, itemIdx }) => {
   const { itemCount } = useSelector((state) => state.items.items);
@@ -39,7 +40,10 @@ const Incrementer = ({ isGlobal, itemIdx }) => {
         <>
           <div className="minus">
             <button
-              onClick={() => dispatch(decreaseCartItem(itemIdx))}
+              onClick={() => {
+                dispatch(decreaseCartItem(itemIdx));
+                dispatch(removeFromTotal(cartItems[itemIdx].item.price));
+              }}
               type="button"
             >
               -
@@ -50,6 +54,7 @@ const Incrementer = ({ isGlobal, itemIdx }) => {
             <button
               onClick={() => {
                 dispatch(increaseCartItem(itemIdx));
+                dispatch(addToTotal(cartItems[itemIdx].item.price));
               }}
               type="button"
             >
