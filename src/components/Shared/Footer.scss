@@ -66,6 +66,47 @@
 
   // Medium Screens
   @media screen and (min-width: 600px) and (max-width: 960px) {
+    padding-bottom: 2rem;
+
+    .navigation-link {
+      padding-left: 2rem;
+    }
+
+    .social-link {
+      margin-left: 1rem;
+    }
+
+    #footer-container,
+    #footer-text,
+    #footer-links {
+      justify-content: space-between;
+    }
+
+    #footer-container {
+      margin: 3rem 0;
+    }
+
+    #footer-text,
+    #footer-links {
+      flex-direction: column;
+    }
+
+    #footer-text,
+    #footer-links {
+      width: 45%;
+    }
+
+    #footer-logo {
+      padding-bottom: 2rem;
+    }
+
+    #footer-links {
+      align-items: flex-end;
+    }
+
+    #orange-bar {
+      margin-left: 0.25rem;
+    }
   }
 
   // Large Screens

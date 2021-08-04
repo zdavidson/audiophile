@@ -69,6 +69,40 @@
 
   // Medium Screens
   @media screen and (min-width: 600px) and (max-width: 960px) {
+    flex-direction: column;
+    text-align: center;
+    margin: 4rem auto;
+
+    button {
+      margin: 1rem auto;
+      width: 50%;
+    }
+
+    img {
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      margin: 1rem 0;
+    }
+
+    h3 {
+      letter-spacing: 0.4em;
+      font-size: 1.25rem;
+      margin: 1rem 0;
+    }
+
+    p {
+      margin: 1rem 0;
+    }
+
+    .flipImg {
+      order: 0;
+    }
+
+    .product-text {
+      flex-direction: column;
+    }
   }
 
   // Large Screens

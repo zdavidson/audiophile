@@ -27,8 +27,8 @@
     text-decoration: none;
   }
 
-  // Small Screens
-  @media screen and (max-width: 600px) {
+  // Small & Medium Screens
+  @media screen and (max-width: 960px) {
     .nav-links {
       display: none;
     }

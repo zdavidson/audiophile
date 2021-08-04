@@ -23,6 +23,10 @@
 
   // Medium Screens
   @media screen and (min-width: 600px) and (max-width: 960px) {
+    #header-container {
+      justify-content: center;
+      padding: 1.5rem 2.25rem;
+    }
   }
 
   // Large Screens

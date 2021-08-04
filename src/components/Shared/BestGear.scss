@@ -37,6 +37,21 @@
 
   // Medium Screens
   @media screen and (min-width: 600px) and (max-width: 960px) {
+    flex-direction: column;
+
+    margin: 15vh 0;
+
+    h2 {
+      margin: 2rem 0;
+    }
+
+    #best-gear-img {
+      order: -1;
+    }
+
+    #best-gear-text {
+      text-align: center;
+    }
   }
 
   // Large Screens
