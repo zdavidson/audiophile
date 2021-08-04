@@ -31,7 +31,9 @@ const ProductCard = ({ item, flip, detail }) => {
                   className="add-to-cart-button"
                   type="button"
                   onClick={() => {
-                    if (cartItems[0].item.name === "") {
+                    if (cartItems === undefined) {
+                      dispatch(startNewCart(item, itemCount));
+                    } else if (cartItems[0].item.name === "") {
                       dispatch(startNewCart(item, itemCount));
                     }
                     dispatch(addToCart({ item, itemCount }));

@@ -12,6 +12,9 @@ export const cartSlice = createSlice({
     clearExistingCart: (state) => {
       state.cartItems = [{ item: { name: "", image: "" }, itemCount: 0 }];
     },
+    removeItemFromCart: (state, action) => {
+      state.cartItems.splice(action.payload, 1);
+    },
     startNewCart: (state) => {
       state.cartItems.shift();
     },
@@ -29,6 +32,7 @@ export const {
   clearExistingCart,
   decreaseCartItem,
   increaseCartItem,
+  removeItemFromCart,
   startNewCart,
 } = cartSlice.actions;
 

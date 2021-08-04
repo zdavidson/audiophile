@@ -1,10 +1,15 @@
 import "./Incrementer.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { increaseItems, decreaseItems } from "../../store/items";
-import { increaseCartItem, decreaseCartItem } from "../../store/cart";
+import {
+  increaseCartItem,
+  decreaseCartItem,
+  clearExistingCart,
+} from "../../store/cart";
 import { addToGlobalCount } from "../../store/globalCount";
 import { addToTotal, removeFromTotal } from "../../store/totalPrice";
 import { lowerCartCount, raiseCartCount } from "../../store/cartCount";
+import { removeItemFromCart } from "../../store/cart";
 
 const Incrementer = ({ isGlobal, itemIdx }) => {
   const { itemCount } = useSelector((state) => state.items.items);
@@ -42,9 +47,24 @@ const Incrementer = ({ isGlobal, itemIdx }) => {
           <div className="minus">
             <button
               onClick={() => {
-                dispatch(decreaseCartItem(itemIdx));
-                dispatch(removeFromTotal(cartItems[itemIdx].item.price));
-                dispatch(lowerCartCount());
+                if (
+                  cartItems[itemIdx].itemCount === 1 &&
+                  cartItems.length === 1
+                ) {
+                  dispatch(decreaseCartItem(itemIdx));
+                  dispatch(removeFromTotal(cartItems[itemIdx].item.price));
+                  dispatch(lowerCartCount());
+                  dispatch(clearExistingCart(itemIdx));
+                } else if (cartItems[itemIdx].itemCount === 1) {
+                  dispatch(decreaseCartItem(itemIdx));
+                  dispatch(removeFromTotal(cartItems[itemIdx].item.price));
+                  dispatch(lowerCartCount());
+                  dispatch(removeItemFromCart(itemIdx));
+                } else {
+                  dispatch(decreaseCartItem(itemIdx));
+                  dispatch(removeFromTotal(cartItems[itemIdx].item.price));
+                  dispatch(lowerCartCount());
+                }
               }}
               type="button"
             >

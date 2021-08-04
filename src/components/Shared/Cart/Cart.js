@@ -18,7 +18,7 @@ const Cart = () => {
   console.log("Cart Items", cartItems);
   console.log("Cart Count", cartCount);
 
-  if (cartItems[0].item.name === "") {
+  if (cartItems === undefined || cartItems[0].item.name === "") {
     return (
       <div className="cart-bg">
         <div className="cart-headers">
