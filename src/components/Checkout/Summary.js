@@ -6,7 +6,7 @@ const Summary = () => {
   const { cartItems } = useSelector((state) => state.cart);
   const totalPrice = useSelector((state) => state.totalPrice.totalPrice);
   const checkout = true;
-  const shippingCost = 40;
+  const shippingCost = 19.95;
   console.log(cartItems);
 
   return (
@@ -35,17 +35,17 @@ const Summary = () => {
 
         <div className="summary-headers">
           <h6>Shipping</h6>
-          <p>${shippingCost}.00</p>
+          <p>${shippingCost}</p>
         </div>
 
         <div className="summary-headers">
           <h6>Tax</h6>
-          <p>{totalPrice * 1.07}</p>
+          <p>${(totalPrice * 1.07).toFixed(2)}</p>
         </div>
 
         <div id="grand-total" className="summary-headers">
           <h6>Grand Total</h6>
-          <p>${totalPrice * 1.07 + shippingCost}</p>
+          <p>${(totalPrice * 1.07 + shippingCost).toFixed(2)}</p>
         </div>
 
         <button>Continue & Pay</button>
