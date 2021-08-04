@@ -14,11 +14,33 @@ const Cart = () => {
 
   console.log("Cart Items", cartItems);
 
-  if (cartItems.length === 0) {
+  if (cartItems[0].item.name === "") {
     return (
-      <div className="cart-item">
-        <ItemDisplaySmall cartItem={{ item: { name: "", image: {} } }} />
-        <Incrementer isGlobal={isGlobal} individualItemCount={""} itemIdx={0} />
+      <div className="cart-bg">
+        <div className="cart-headers">
+          <h6>Cart (0)</h6>
+          <button
+            id="remove-all-btn"
+            type="button"
+            onClick={() => {
+              dispatch(clearExistingCart());
+            }}
+          >
+            Remove All
+          </button>
+        </div>
+        <div className="cart-items">
+          <div id="empty-cart" className="cart-item">
+            No Items
+          </div>
+        </div>
+        <div className="cart-headers">
+          <h6>Total</h6>
+          <p>${totalPrice}.00</p>
+        </div>
+        <Link to="/checkout" target="_top">
+          <button>Checkout</button>
+        </Link>
       </div>
     );
   } else {

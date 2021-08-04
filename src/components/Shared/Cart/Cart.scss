@@ -38,6 +38,12 @@
     display: flex;
   }
 
+  #empty-cart {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+
   #remove-all-btn {
     background-color: transparent;
     color: black;
