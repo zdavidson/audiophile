@@ -1,7 +1,7 @@
 import "./MobileMenu.scss";
 import ProductCategories from "./ProductCategories";
 
-const MobileMenu = (setIsOpen) => {
+const MobileMenu = () => {
   return (
     <>
       <div id="mobile-menu-bg"></div>

@@ -1,0 +1,44 @@
+#checkout-success {
+  // General Styles
+  height: 92vh;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.459);
+
+  position: absolute;
+  left: 0;
+  top: 8.9vh;
+  z-index: 5;
+
+  #success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #success-card {
+    background-color: white;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  // Small Screens
+  @media screen and (max-width: 600px) {
+  }
+
+  // Medium Screens
+  @media screen and (min-width: 600px) and (max-width: 960px) {
+  }
+
+  // Large Screens
+  @media screen and (min-width: 960px) {
+    #success-container {
+      height: 92vh;
+    }
+
+    #success-card {
+      width: 35vw;
+    }
+  }
+}

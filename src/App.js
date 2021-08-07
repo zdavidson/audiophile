@@ -22,7 +22,7 @@ const App = () => {
         />
         {viewCart && <CartView />}
 
-        {isOpen && <MobileMenu setIsOpen={setIsOpen} />}
+        {isOpen && <MobileMenu />}
 
         <Route exact path="/" component={Home} />
         <Route exact path="/checkout" component={Checkout} />

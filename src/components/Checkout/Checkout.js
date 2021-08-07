@@ -1,10 +1,15 @@
 import "./Checkout.scss";
 import Container from "react-bootstrap/Container";
 import Summary from "./Summary";
+import CheckoutSuccess from "./CheckoutSuccess";
+import { useState } from "react";
 
 const Checkout = () => {
+  const [viewSuccessScreen, setViewSuccessScreen] = useState(false);
   return (
     <div id="checkout-bg">
+      {viewSuccessScreen && <CheckoutSuccess />}
+
       <Container id="checkout-container">
         <div id="checkout">
           <h2>Checkout</h2>
@@ -90,7 +95,10 @@ const Checkout = () => {
           </form>
         </div>
 
-        <Summary />
+        <Summary
+          setViewSuccessScreen={setViewSuccessScreen}
+          viewSucessScreen={viewSuccessScreen}
+        />
       </Container>
     </div>
   );

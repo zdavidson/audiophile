@@ -2,7 +2,7 @@ import "./Summary.scss";
 import ItemDisplaySmall from "../Shared/ItemDisplaySmall";
 import { useSelector } from "react-redux";
 
-const Summary = () => {
+const Summary = ({ viewSuccessScreen, setViewSuccessScreen }) => {
   const { cartItems } = useSelector((state) => state.cart);
   const totalPrice = useSelector((state) => state.totalPrice.totalPrice);
   const checkout = true;
@@ -88,7 +88,13 @@ const Summary = () => {
           <p>${(totalPrice * 1.07 + shippingCost).toFixed(2)}</p>
         </div>
 
-        <button>Continue & Pay</button>
+        <button
+          onClick={() => {
+            setViewSuccessScreen(!viewSuccessScreen);
+          }}
+        >
+          Continue & Pay
+        </button>
       </div>
     </div>
   );
