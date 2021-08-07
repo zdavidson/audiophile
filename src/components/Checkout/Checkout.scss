@@ -29,15 +29,23 @@
     letter-spacing: 0.15rem;
   }
 
-  input {
+  input,
+  #payment-method div {
     border-radius: 0.25rem;
     border: 1px solid rgb(199, 199, 199);
   }
 
   #billing-details,
-  #shipping-info {
+  #shipping-info,
+  #payment-info {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  #payment {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
 
   // Small Screens
@@ -62,7 +70,8 @@
       margin-bottom: 1.5rem;
     }
 
-    input {
+    input,
+    #payment-method div {
       padding: 1rem;
       padding-right: 6rem;
       margin-right: 1rem;
@@ -74,12 +83,19 @@
     }
 
     #billing-details div,
-    #shipping-info div {
+    #shipping-info div,
+    #payment-method {
       display: flex;
       flex-direction: column;
     }
 
-    #header-shipping {
+    #header-shipping,
+    #header-payment {
+      margin-top: 3rem;
+    }
+
+    #e-money-info {
+      display: flex;
       margin-top: 3rem;
     }
   }

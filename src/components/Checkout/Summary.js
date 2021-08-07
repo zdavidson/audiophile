@@ -80,7 +80,7 @@ const Summary = () => {
 
         <div className="summary-headers">
           <h6>Tax</h6>
-          <p>${(totalPrice * 1.07).toFixed(2)}</p>
+          <p>${(totalPrice * 0.07).toFixed(2)}</p>
         </div>
 
         <div id="grand-total" className="summary-headers">
